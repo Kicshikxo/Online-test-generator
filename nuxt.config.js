@@ -1,7 +1,7 @@
 import colors from 'vuetify/lib/util/colors'
 
 export default {
-	target: 'static',
+	target: 'server',
 
 	head: {
 		htmlAttrs: {
