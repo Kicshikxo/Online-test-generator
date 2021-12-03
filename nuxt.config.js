@@ -67,9 +67,9 @@ export default {
 		]
 	],
 
-	modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+	modules: ['@nuxt/http', '@nuxtjs/pwa'],
 
-	axios: {
+	http: {
 		baseURL: '/'
 	},
 
