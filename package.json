@@ -17,7 +17,8 @@
 		"core-js": "^3.15.1",
 		"express": "^4.17.1",
 		"nuxt": "^2.15.8",
-		"vue-toastification": "^1.7.12"
+		"vue-toastification": "^1.7.12",
+		"vuetify": "^2.6.1"
 	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.14.7",
