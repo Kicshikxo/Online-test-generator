@@ -4,7 +4,7 @@
 			<v-col cols class='pb-0 pe-0'>
 				<v-card class='d-flex flex-column'>
 					<v-card-title class='headline'>
-						Разметка {{ data }}
+						Разметка
 					</v-card-title>
 					<v-card-text>
 						<v-textarea v-model='code.javascript' label='javascript' outlined no-resize color='white' />
@@ -68,12 +68,6 @@
 import { mdiCheckboxMarkedCircle, mdiChevronDown, mdiContentCopy, mdiDotsVertical } from '@mdi/js'
 
 export default {
-	async asyncData({ $api }) {
-		const data = await $api('test')
-		return {
-			data
-		}
-	},
 	data: () => ({
 		mdiCheckboxMarkedCircle,
 		mdiDotsVertical,

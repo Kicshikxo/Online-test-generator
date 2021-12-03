@@ -1,6 +1,6 @@
 <template>
 	<pre class='output-code-wrapper'>
-		<code v-highlight='code' class='output-code' :class='language'>{{ code }}</code>
+		<code class='output-code' :class='language'>{{ code }}</code>
 	</pre>
 </template>
 
