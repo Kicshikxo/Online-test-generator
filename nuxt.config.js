@@ -13,13 +13,11 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
 			{ rel: 'stylesheet', href: '/css/vuetify.min.css' },
 			{ rel: 'preload', href: '/css/vuetify.min.css', as: 'style' },
-			{ rel: 'stylesheet', href: '/css/roboto-fontface.css' },
-			{ rel: 'preload', href: '/css/roboto-fontface.css', as: 'style' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true }
 		]
 	},
 
-	css: [],
+	css: ['~/css/roboto-fontface.css'],
 
 	plugins: [
 		{ src: '~/plugins/api.server.js', mode: 'server' },
