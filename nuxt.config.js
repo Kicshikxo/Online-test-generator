@@ -7,10 +7,10 @@ export default {
 		htmlAttrs: {
 			lang: 'ru'
 		},
-		title: 'Online test generator',
+		title: 'Online Test Generator',
 		meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: '' }, { name: 'format-detection', content: 'telephone=no' }],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
 			{ rel: 'stylesheet', href: '/css/vuetify.min.css' },
 			{ rel: 'preload', href: '/css/vuetify.min.css', as: 'style' },
 			{ rel: 'stylesheet', href: '/css/roboto-fontface.css' },
@@ -21,10 +21,14 @@ export default {
 
 	css: [],
 
+	plugins: [
+		{ src: '~/plugins/api.server.js', mode: 'server' },
+		{ src: '~/plugins/api.client.js', mode: 'client' }
+	],
+
 	components: true,
 
 	buildModules: [
-		'@nuxt/typescript-build',
 		'@nuxtjs/eslint-module',
 		[
 			'@nuxtjs/vuetify',
@@ -63,13 +67,10 @@ export default {
 		]
 	],
 
-	modules: [
-		'@nuxtjs/axios',
-		'@nuxtjs/pwa'
-	],
+	modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
 	axios: {
-		baseUrl: '/'
+		baseURL: '/'
 	},
 
 	pwa: {
@@ -82,6 +83,8 @@ export default {
 			lang: 'ru'
 		}
 	},
+
+	serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }],
 
 	build: {
 		minimize: true,

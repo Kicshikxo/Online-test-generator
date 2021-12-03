@@ -8,10 +8,7 @@ module.exports = {
 		parser: '@babel/eslint-parser',
 		requireConfigFile: false
 	},
-	extends: [
-		'@nuxtjs/eslint-config-typescript',
-		'plugin:nuxt/recommended'
-	],
+	extends: ['@nuxtjs', 'plugin:nuxt/recommended'],
 	plugins: [],
 	rules: {
 		indent: ['error', 'tab'],
