@@ -17,7 +17,7 @@ export default {
 		]
 	},
 
-	css: ['~/css/roboto-fontface.css'],
+	css: ['~/static/css/roboto-fontface.css'],
 
 	plugins: [
 		{ src: '~/plugins/api.server.js', mode: 'server' },
