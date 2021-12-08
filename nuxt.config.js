@@ -13,7 +13,7 @@ export default {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{ rel: 'stylesheet', href: '/vuetify.loaded.css' }
+			{ rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css' }
 			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
 		]
 	},
