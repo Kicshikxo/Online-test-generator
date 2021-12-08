@@ -12,9 +12,9 @@ export default {
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-			// { rel: 'stylesheet', href: '/vuetify.min.css' },
-			// { rel: 'preload', href: '/vuetify.min.css', as: 'style' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+			{ rel: 'stylesheet', href: '/vuetify.loader.css' },
+			{ rel: 'preload', href: '/vuetify.loader.css', as: 'style' }
 		]
 	},
 
