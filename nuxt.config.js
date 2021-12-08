@@ -58,9 +58,6 @@ export default {
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 	vuetify: {
 		defaultAssets: false,
-		loader: {
-			registerStylesSSR: true
-		},
 		theme: {
 			dark: true,
 			themes: {
