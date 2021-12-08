@@ -12,9 +12,9 @@ export default {
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{ rel: 'stylesheet', href: '/vuetify.min.css' },
-			{ rel: 'preload', href: '/vuetify.min.css', as: 'style' }
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+			// { rel: 'stylesheet', href: '/vuetify.min.css' },
+			// { rel: 'preload', href: '/vuetify.min.css', as: 'style' }
 		]
 	},
 
@@ -58,6 +58,9 @@ export default {
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 	vuetify: {
 		defaultAssets: false,
+		loader: {
+			registerStylesSSR: true
+		},
 		theme: {
 			dark: true,
 			themes: {
