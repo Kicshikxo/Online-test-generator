@@ -13,13 +13,13 @@ export default {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			// { rel: 'stylesheet', href: '/vuetify.loaded.css' },
-			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
+			{ rel: 'stylesheet', href: '/vuetify.loaded.css' },
+			{ rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
 		]
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [{ src: '@/static/vuetify.loaded.css', ssr: false }],
+	css: [],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [],
