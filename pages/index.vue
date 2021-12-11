@@ -62,17 +62,15 @@ export default {
 	}
 }
 </script>
-<style>
-:root {
-	--content-width: 1150px;
-}
+
+<style scoped>
 .background-content {
 	width: 100vw;
-	height: 442px;
+	height: 280px;
 	background-color: #1C69B2
 }
 .background-content-container {
-	max-width: var(--content-width);
+	max-width: 1150px;
 }
 .background-content-header {
 	color: white;
@@ -85,6 +83,6 @@ export default {
 }
 .main-content {
 	transform: translateY(-126px);
-	max-width: var(--content-width);
+	max-width: 1150px;
 }
 </style>
