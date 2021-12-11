@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .background-content {
 	width: 100vw;
-	height: 280px;
+	height: 442px;
 	background-color: #1C69B2
 }
 .background-content-container {

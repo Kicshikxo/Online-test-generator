@@ -32,7 +32,7 @@ export default {
 .background-content {
 	width: 100vw;
 	height: 280px;
-	background-color: #1C69B2
+	background-color: #00202D
 }
 .background-content-container {
 	max-width: 1150px;
