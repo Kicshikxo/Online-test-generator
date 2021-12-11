@@ -34,6 +34,20 @@ export default {
 		'@nuxt/typescript-build',
 		// https://go.nuxtjs.dev/vuetify
 		'@nuxtjs/vuetify',
+		[
+			'vue-toastification/nuxt',
+			{
+				icon: false,
+				position: 'bottom-right',
+				transition: 'Vue-Toastification__fade',
+				closeButton: false,
+				draggablePercent: 0.35,
+				transitionDuration: 750,
+				maxToasts: 5,
+				timeout: 1750,
+				newestOnTop: false
+			}
+		]
 	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
