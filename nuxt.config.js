@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		titleTemplate: '%s - online-test-generator',
-		title: 'online-test-generator',
+		// titleTemplate: '%s - online-test-generator',
+		title: 'Online Test Generator',
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,6 +17,11 @@ export default {
 			{ rel: 'stylesheet', href: '/vuetify.loaded.css' },
 			{ rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
 		]
+	},
+
+	loading: {
+		color: '#1976D2',
+		height: '3px'
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -78,7 +83,7 @@ export default {
 	vuetify: {
 		defaultAssets: false,
 		theme: {
-			dark: true,
+			dark: false,
 			themes: {
 				dark: {
 					primary: colors.blue.darken2,
