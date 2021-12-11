@@ -41,6 +41,7 @@ export default {
 		'@nuxtjs/axios',
 		// https://go.nuxtjs.dev/pwa
 		'@nuxtjs/pwa',
+		'nuxt-speedkit'
 	],
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -52,6 +53,13 @@ export default {
 	pwa: {
 		manifest: {
 			lang: 'ru'
+		}
+	},
+
+	speedkit: {
+		detection: {
+			performance: true,
+			browserSupport: true
 		}
 	},
 
