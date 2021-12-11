@@ -1,6 +1,6 @@
 <template>
 	<v-app>
-		<v-app-bar hide-on-scroll color="white" app flat>
+		<v-app-bar hide-on-scroll color="white" short app flat>
 			<!-- <v-app-bar-title><h3 class='font-weight-regular'>Test Maker</h3></v-app-bar-title> -->
 			<v-spacer></v-spacer>
 			<div class='header-buttons-container d-flex ma-3 mr-0'>
