@@ -3,7 +3,7 @@
 		<v-col cols="12" sm="8" md="6">
 			<v-card>
 				<v-card-title class="headline">
-					Welcome to the Vuetify + Nuxt.js template {{ testData }}
+					Welcome to the Vuetify + Nuxt.js template
 				</v-card-title>
 				<v-card-text>
 					<p>
@@ -69,18 +69,33 @@
 				</v-card-text>
 				<v-card-actions>
 					<v-spacer />
-					<v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
+					<v-btn color="primary" @click='api'>
+						API
+						<v-icon right>{{mdiSwapVerticalBold}}</v-icon>
+					</v-btn>
+					<v-btn color="primary" nuxt to="/inspire">
+						Continue
+						<v-icon right>{{mdiChevronRight}}</v-icon>
+					</v-btn>
 				</v-card-actions>
 			</v-card>
 		</v-col>
 	</v-row>
 </template>
 <script>
+import { mdiSwapVerticalBold, mdiChevronRight } from '@mdi/js';
+
 export default {
-	async asyncData({$api}) {
-		const testData = await $api('test')
-		
-		return { testData }
+	data: () => ({
+		mdiSwapVerticalBold,
+		mdiChevronRight
+	}),
+	methods: {
+		async api() {
+			const apiData = await this.$api('test')
+
+			this.$toast(JSON.stringify(apiData))
+		}
 	}
 }
 </script>
