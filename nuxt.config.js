@@ -14,14 +14,14 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			// { rel: 'stylesheet', href: '/vuetify.loaded.css' },
-			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
+			{ rel: 'stylesheet', href: '/vuetify.loaded.css' },
+			{ rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
 		]
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	// css: [],
-	css: ['@/static/vuetify.loaded.css'],
+	css: [],
+	// css: ['@/static/vuetify.loaded.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [],
