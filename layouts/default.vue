@@ -1,7 +1,7 @@
 <template>
 	<v-app dark>
 		<v-main>
-			<v-container v-cloak>
+			<v-container>
 				<Nuxt />
 			</v-container>
 		</v-main>
@@ -9,9 +9,6 @@
 </template>
 
 <style>
-[v-cloak] {
-	display: none;
-}
 html {
 	overflow: auto !important;
 	color-scheme: dark;
