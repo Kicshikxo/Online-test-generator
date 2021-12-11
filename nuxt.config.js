@@ -24,7 +24,10 @@ export default {
 	// css: ['@/static/vuetify.loaded.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [],
+	plugins: [
+		{ src: '~/plugins/api.server.js', mode: 'server' },
+		{ src: '~/plugins/api.client.js', mode: 'client' }
+	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
 	components: true,
@@ -89,6 +92,8 @@ export default {
 			}
 		}
 	},
+
+	serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {

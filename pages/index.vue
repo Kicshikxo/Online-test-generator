@@ -3,7 +3,7 @@
 		<v-col cols="12" sm="8" md="6">
 			<v-card>
 				<v-card-title class="headline">
-					Welcome to the Vuetify + Nuxt.js template
+					Welcome to the Vuetify + Nuxt.js template {{ testData }}
 				</v-card-title>
 				<v-card-text>
 					<p>
@@ -75,3 +75,12 @@
 		</v-col>
 	</v-row>
 </template>
+<script>
+export default {
+	async asyncData({$api}) {
+		const testData = await $api('test')
+		
+		return { testData }
+	}
+}
+</script>
