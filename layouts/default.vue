@@ -1,6 +1,7 @@
 <template>
 	<v-app>
 		<v-app-bar
+			color="white"
 			height="64"
 			app
 			flat
@@ -83,7 +84,7 @@ export default {
 				this.$toast("Успешный выход", {
 					type: "success",
 				});
-				this.$router.push('/')
+				this.$router.push("/");
 			} else {
 				this.$toast("Вы не залогинены", {
 					type: "error",
