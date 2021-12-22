@@ -1,20 +1,18 @@
 <template>
 	<div>
-		<div class='background-content'>
-			<v-container class='background-content-container'>
-				<h1 class='background-content-header my-8'>Регистрация</h1>
+		<div class="background-content">
+			<v-container class="background-content-container">
+				<h1 class="background-content-header my-8">Регистрация</h1>
 			</v-container>
 		</div>
-		<v-container class='main-content'>
+		<v-container class="main-content">
 			<v-row>
 				<v-col>
-					<v-card>
+					<v-card class="registration-card">
 						<v-card-title class="headline">
-							Популярные тесты
+							Регистрация временно не доступна
 						</v-card-title>
-						<v-card-text>
-							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-						</v-card-text>
+						<v-card-text></v-card-text>
 					</v-card>
 				</v-col>
 			</v-row>
@@ -23,16 +21,18 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
+.registration-card {
+	height: 50vh;
+}
+
 .background-content {
 	width: 100vw;
 	height: 280px;
-	background-color: #00202D
+	background-color: #00202d;
 }
 .background-content-container {
 	max-width: 1150px;
