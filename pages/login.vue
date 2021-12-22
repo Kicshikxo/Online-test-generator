@@ -35,7 +35,6 @@
 								></v-text-field>
 							</v-form>
 						</v-card-text>
-						<v-spacer></v-spacer>
 						<v-card-actions class="ma-2">
 							<v-spacer></v-spacer>
 							<v-btn
