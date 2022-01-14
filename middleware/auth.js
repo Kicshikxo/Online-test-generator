@@ -4,12 +4,12 @@ export default async ({ $api, $toast, store, redirect }) => {
 	if (result.success && !store.state.auth.isLoggedIn) {
 		store.commit('auth/loggedIn', result.user)
 	} else {
+		store.dispatch('auth/logout')
 		if (process.client && $toast) {
 			$toast('Ошибка доступа', {
 				type: 'error'
 			})
 		}
-		store.dispatch('auth/logout');
 		redirect('/')
 	}
 }
