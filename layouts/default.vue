@@ -16,7 +16,7 @@
 			> -->
 			<nuxt-link to="/">
 				<v-img
-					src="/img/logo.png"
+					src="/img/logo.webp"
 					max-height="48"
 					max-width="48"
 					contain
