@@ -14,6 +14,16 @@
 					{{ $store.state.auth.isLoggedIn }}
 				</h3></v-app-bar-title
 			> -->
+			<nuxt-link to="/">
+				<v-img
+					class="mx-2"
+					src="/img/logo.png"
+					max-height="48"
+					max-width="48"
+					contain
+				></v-img>
+			</nuxt-link>
+
 			<v-spacer></v-spacer>
 			<div class="header-buttons-container d-flex align-center">
 				<transition name="text-slide-down" mode="out-in">
