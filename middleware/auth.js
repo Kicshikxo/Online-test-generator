@@ -1,7 +1,7 @@
 export default async ({ $api, $toast, store, redirect }) => {
 	const result = await $api('auth')
 
-	if (result.success && !store.state.auth.isLoggedIn) {
+	if (result.success) {
 		store.commit('auth/loggedIn', result.user)
 	} else {
 		store.dispatch('auth/logout')
