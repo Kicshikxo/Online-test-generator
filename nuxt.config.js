@@ -74,7 +74,12 @@ export default {
 
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
 	pwa: {
+		icon: {
+			source: '@/static/icon.png'
+		},
 		manifest: {
+			name: 'Online Test Generator',
+			short_name: 'Test Generator',
 			lang: 'ru'
 		}
 	},
