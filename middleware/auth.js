@@ -9,6 +9,7 @@ export default async ({ $api, $toast, store, redirect }) => {
 				type: 'error'
 			})
 		}
+		store.dispatch('auth/logout');
 		redirect('/')
 	}
 }
