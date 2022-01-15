@@ -14,14 +14,14 @@
 					{{ $store.state.auth.isLoggedIn }}
 				</h3></v-app-bar-title
 			> -->
-			<!-- <nuxt-link to="/">
+			<nuxt-link to="/">
 				<v-img
 					src="/img/logo.webp"
 					max-height="48"
 					max-width="48"
 					contain
 				></v-img>
-			</nuxt-link> -->
+			</nuxt-link>
 
 			<v-spacer></v-spacer>
 			<div class="header-buttons-container d-flex align-center">
