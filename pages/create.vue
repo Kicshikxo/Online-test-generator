@@ -88,7 +88,7 @@
 									</v-col>
 								</v-row>
 							</v-card-title>
-							<div class="mx-4">
+							<div class="mr-4">
 								<v-radio-group
 									v-if="question.type == 'radio'"
 									class="my-2 pa-0"
@@ -101,6 +101,9 @@
 										:key="index"
 										class="d-flex align-center my-2"
 									>
+										<v-icon class="drag-handle" v-handle>{{
+											mdiDrag
+										}}</v-icon>
 										<div>
 											<v-radio
 												:value="index"
@@ -153,6 +156,9 @@
 										:key="index"
 										class="d-flex align-center my-2"
 									>
+										<v-icon class="drag-handle" v-handle>{{
+											mdiDrag
+										}}</v-icon>
 										<div>
 											<v-checkbox
 												:value="index"
@@ -161,7 +167,7 @@
 												"
 												:on-icon="mdiCheckboxMarked"
 												hide-details
-												class="ma-0"
+												class="ma-0 pa-0"
 												:ripple="false"
 											></v-checkbox>
 										</div>
@@ -291,28 +297,28 @@ export default {
 		questions: [
 			{
 				type: "radio",
-				text: "Попа?",
+				text: "Вопрос 1",
 				options: [
 					{
-						text: "Попа)",
+						text: "Да",
 					},
 					{
-						text: "Попа(",
+						text: "Нет",
 					},
 				],
 			},
 			{
 				type: "check",
-				text: "Попа?",
+				text: "Вопрос 2",
 				options: [
 					{
-						text: "Попа)",
+						text: "Да",
 					},
 					{
-						text: "Попа(",
+						text: "Нет",
 					},
 					{
-						text: "Попа...",
+						text: "Не знаю",
 					},
 				],
 			},
