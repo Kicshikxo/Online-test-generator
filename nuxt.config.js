@@ -31,7 +31,8 @@ export default {
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
 		{ src: '~/plugins/api.server.js', mode: 'server' },
-		{ src: '~/plugins/api.client.js', mode: 'client' }
+		{ src: '~/plugins/api.client.js', mode: 'client' },
+		{ src: '~/plugins/slicksort' }
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
@@ -87,6 +88,19 @@ export default {
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 	vuetify: {
 		defaultAssets: false,
+		// treeShake: {
+		// 	loaderOptions: () => ({
+		// 		registerStylesSSR: true,
+		// 	})
+		// },
+		lang: {
+			current: 'ru',
+			locales: {
+				ru: {
+					noDataText: 'Список вариантов пуст'
+				}
+			}
+		},
 		theme: {
 			dark: false,
 			themes: {
