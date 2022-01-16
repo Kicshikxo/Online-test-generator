@@ -277,7 +277,7 @@ import {
 } from "@mdi/js";
 
 export default {
-	middleware: "auth",
+	// middleware: "auth",
 	data: () => ({
 		mdiDrag,
 		mdiCheckboxMarked,
