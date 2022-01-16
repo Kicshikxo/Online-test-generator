@@ -88,12 +88,12 @@ export default {
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 	vuetify: {
 		defaultAssets: false,
-		treeShake: false,
-		// treeShake: {
-		// 	loaderOptions: () => ({
-		// 		registerStylesSSR: true,
-		// 	})
-		// },
+		treeShake: {
+			loaderOptions: () => ({
+				components: [],
+				transitions: ['fade-transition']
+			})
+		},
 		lang: {
 			current: 'ru',
 			locales: {
