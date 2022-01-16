@@ -36,8 +36,8 @@
 								depressed
 								large
 								class="px-6"
-								to="/auth"
-								>Аккаунт</v-btn
+								to="/create"
+								>Создать</v-btn
 							>
 							<v-btn
 								color="primary"
@@ -72,7 +72,9 @@
 		</v-app-bar>
 		<v-main>
 			<div class="nuxt-wrap">
-				<Nuxt class="nuxt" />
+				<div class="nuxt">
+					<Nuxt />
+				</div>
 			</div>
 		</v-main>
 	</v-app>
@@ -124,6 +126,8 @@ export default {
 }
 html {
 	overflow: hidden !important;
+	scrollbar-color: white;
+	font-family: Roboto, sans-serif !important;
 	/* color-scheme: dark; */
 }
 .nuxt-wrap {
@@ -148,5 +152,10 @@ html {
 }
 .header-buttons-container .header-buttons {
 	gap: 24px;
+}
+@media (min-width: 1904px) {
+	.container {
+		max-width: 1185px !important;
+	}
 }
 </style>
