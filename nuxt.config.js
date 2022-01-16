@@ -87,13 +87,14 @@ export default {
 
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 	vuetify: {
+		optionsPath: '~/vuetify.options.js',
 		defaultAssets: false,
-		treeShake: {
-			loaderOptions: () => ({
-				components: [],
-				transitions: ['fade-transition']
-			})
-		},
+		// treeShake: {
+		// 	loaderOptions: () => ({
+		// 		components: [],
+		// 		transitions: ['fade-transition']
+		// 	})
+		// },
 		lang: {
 			current: 'ru',
 			locales: {
