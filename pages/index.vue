@@ -18,9 +18,7 @@
 						<v-card-title class="headline">
 							Популярные тесты
 						</v-card-title>
-						<v-card-text>
-							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-						</v-card-text>
+						<v-card-text style="height: 300px"> </v-card-text>
 					</v-card>
 				</v-col>
 				<v-col>
@@ -28,9 +26,7 @@
 						<v-card-title class="headline">
 							Недавние тесты
 						</v-card-title>
-						<v-card-text>
-							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-						</v-card-text>
+						<v-card-text style="height: 300px"> </v-card-text>
 						<v-card-actions>
 							<v-spacer />
 							<v-btn color="primary" nuxt to="/inspire">
@@ -62,9 +58,6 @@ export default {
 	height: 442px;
 	background-color: #1c69b2;
 }
-.background-content-container {
-	max-width: 1150px;
-}
 .background-content-header {
 	color: white;
 	font-size: 48px;
@@ -76,6 +69,6 @@ export default {
 }
 .main-content {
 	transform: translateY(-126px);
-	max-width: 1150px;
+	/* max-width: 1185px; */
 }
 </style>
