@@ -142,6 +142,9 @@ html {
 	height: 100%;
 	position: absolute;
 }
+.nuxt > div {
+	height: 100%;
+}
 .v-toolbar__content,
 .v-toolbar__extension {
 	padding: 0 16px;
