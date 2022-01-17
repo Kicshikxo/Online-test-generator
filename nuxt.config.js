@@ -121,5 +121,20 @@ export default {
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
+		extend(config, { isDev, isClient }) {
+			config.module.rules.push({
+				enforce: "pre",
+				test: /\.s[ac]ss$/,
+				include: /node_modules[/\\]vuetify[/\\]/,
+				issuer: /node_modules[/\\]vuetify[/\\]/,
+				loader: "null-loader",
+			})
+
+			// console.log(config)
+			// Sets webpack's mode to development if `isDev` is true.
+			if (isDev) {
+				config.mode = 'development'
+			}
+		}
 	}
 }
