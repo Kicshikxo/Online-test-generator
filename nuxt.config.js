@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 export default {
 	// Global page headers: https://go.nuxtjs.dev/config-head
@@ -14,8 +14,8 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			{ rel: 'stylesheet', href: '/vuetify.loaded.css' },
-			{ rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
+			// { rel: 'stylesheet', href: '/vuetify.loaded.css' },
+			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
 		]
 	},
 
@@ -32,7 +32,8 @@ export default {
 	plugins: [
 		{ src: '~/plugins/api.server.js', mode: 'server' },
 		{ src: '~/plugins/api.client.js', mode: 'client' },
-		{ src: '~/plugins/slicksort' }
+		{ src: '~/plugins/slicksort' },
+		{ src: '~plugins/vuetify.js' }
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,7 +44,7 @@ export default {
 		// https://go.nuxtjs.dev/typescript
 		'@nuxt/typescript-build',
 		// https://go.nuxtjs.dev/vuetify
-		'@nuxtjs/vuetify',
+		// '@nuxtjs/vuetify',
 		[
 			'vue-toastification/nuxt',
 			{
@@ -86,43 +87,53 @@ export default {
 	},
 
 	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-	vuetify: {
-		defaultAssets: false,
-		treeShake: process.env.NODE_ENV === 'production' && {
-			loaderOptions: () => ({
-				registerStylesSSR: true
-			})
-		},
-		lang: {
-			current: 'ru',
-			locales: {
-				ru: {
-					noDataText: 'Список вариантов пуст'
-				}
-			}
-		},
-		theme: {
-			dark: false,
-			themes: {
-				dark: {
-					primary: colors.blue.darken2,
-					accent: colors.grey.darken3,
-					secondary: colors.amber.darken3,
-					info: colors.teal.lighten1,
-					warning: colors.amber.base,
-					error: colors.deepOrange.accent4,
-					success: colors.green.accent3
-				}
-			}
-		}
-	},
+	// vuetify: {
+	// 	defaultAssets: false,
+	// 	treeShake: {
+	// 		loaderOptions: () => ({
+	// 			registerStylesSSR: true
+	// 		})
+	// 	},
+	// 	lang: {
+	// 		current: 'ru',
+	// 		locales: {
+	// 			ru: {
+	// 				noDataText: 'Список вариантов пуст'
+	// 			}
+	// 		}
+	// 	},
+	// 	theme: {
+	// 		dark: false,
+	// 		themes: {
+	// 			dark: {
+	// 				primary: colors.blue.darken2,
+	// 				accent: colors.grey.darken3,
+	// 				secondary: colors.amber.darken3,
+	// 				info: colors.teal.lighten1,
+	// 				warning: colors.amber.base,
+	// 				error: colors.deepOrange.accent4,
+	// 				success: colors.green.accent3
+	// 			}
+	// 		}
+	// 	}
+	// },
 
 	serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
+		transpile: ['vuetify/lib'],
 		extend(config, { isDev, isClient }) {
-			// Sets webpack's mode to development if `isDev` is true.
+			// enabling registerStylesSRR for vuetify loader: https://github.com/vuetifyjs/vuetify-loader#registerstylesssr
+			config.module.rules.forEach(rule => {
+				rule.oneOf?.forEach(one => {
+					one.use.forEach(loader => {
+						if (loader.loader?.includes('vue-style-loader'))
+							loader.options.manualInject = true
+					})
+				})
+			})
+			config.plugins.push(new VuetifyLoaderPlugin({ registerStylesSSR: true }))
 			if (isDev) {
 				config.mode = 'development'
 			}
