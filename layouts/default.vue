@@ -57,14 +57,14 @@
 								@click="login"
 								>Войти</v-btn
 							>
-							<v-btn
+							<!-- <v-btn
 								color="primary"
 								depressed
 								large
 								class="px-6"
 								@click="registration"
 								>Регистрация</v-btn
-							>
+							> -->
 						</template>
 					</div>
 				</transition>
