@@ -27,7 +27,7 @@ export default {
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: ['~/static/roboto.fontface.css'],
+	css: [],
 	// css: ['@/static/vuetify.loaded.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,7 +35,7 @@ export default {
 		{ src: '~/plugins/api.server.js', mode: 'server' },
 		{ src: '~/plugins/api.client.js', mode: 'client' },
 		{ src: '~/plugins/slicksort' },
-		{ src: '~plugins/vuetify.js' }
+		{ src: '~/plugins/vuetify.js' }
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
