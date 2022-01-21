@@ -14,8 +14,8 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			// { rel: 'stylesheet', href: '/vuetify.loaded.css' },
-			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' }
+			{ rel: 'stylesheet', href: '/roboto.fontface.css' },
+			{ rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
 		]
 	},
 
