@@ -26,7 +26,8 @@
     "nuxt": "^2.15.7",
     "vue-slicksort": "^1.2.0",
     "vue-toastification": "^1.7.14",
-    "vuetify": "^2.5.5"
+    "vuetify": "^2.5.5",
+    "vuetify-loader": "^1.7.3"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.7",
