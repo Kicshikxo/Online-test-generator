@@ -12,7 +12,7 @@
 			</v-container>
 		</div>
 		<v-container class="main-content">
-			<v-row>
+			<v-row class="flex-md-row flex-column">
 				<v-col>
 					<v-card>
 						<v-card-title class="headline">
