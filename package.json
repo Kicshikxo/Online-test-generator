@@ -33,6 +33,7 @@
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/vuetify": "^1.12.1",
+    "nuxt-compress": "^5.0.0",
     "webpack": "^4.46.0"
   }
 }
