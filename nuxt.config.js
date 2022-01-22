@@ -93,21 +93,6 @@ export default {
 	build: {
 		transpile: ['vuetify/lib'],
 		plugins: [new VuetifyLoaderPlugin({ registerStylesSSR: true })],
-		loaders: { vueStyle: { manualInject: true } },
-		html: {
-			minify: {
-				collapseBooleanAttributes: true,
-				decodeEntities: true,
-				minifyCSS: true,
-				minifyJS: true,
-				processConditionalComments: true,
-				removeEmptyAttributes: true,
-				removeRedundantAttributes: true,
-				trimCustomFragments: true,
-				useShortDoctype: true,
-				preserveLineBreaks: false,
-				collapseWhitespace: true
-			}
-		},
+		loaders: { vueStyle: { manualInject: true } }
 	}
 }
