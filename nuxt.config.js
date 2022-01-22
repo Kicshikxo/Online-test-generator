@@ -14,8 +14,8 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			{ rel: 'stylesheet', href: '/roboto.fontface.css' },
-			{ rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
+			// { rel: 'stylesheet', href: '/roboto.fontface.css' },
+			// { rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
 		]
 	},
 
@@ -26,7 +26,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	// css: [process.env.NODE_ENV === 'production' ? '' : '~/node_modules/vuetify/dist/vuetify.min.css'],
-	// css: ['@/static/vuetify.loaded.css'],
+	css: ['@/static/roboto.fontface.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
@@ -91,21 +91,8 @@ export default {
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {
 		transpile: ['vuetify/lib'],
-		extend(config, { isDev, isClient }) {
-			// enabling registerStylesSRR for vuetify loader: https://github.com/vuetifyjs/vuetify-loader#registerstylesssr
-			config.module.rules.forEach(rule => {
-				rule.oneOf?.forEach(one => {
-					one.use.forEach(loader => {
-						if (loader.loader?.includes('vue-style-loader'))
-							loader.options.manualInject = true
-					})
-				})
-			})
-			config.plugins.push(new VuetifyLoaderPlugin({ registerStylesSSR: true }))
-			if (isDev) {
-				config.mode = 'development'
-			}
-		},
+		plugins: [new VuetifyLoaderPlugin({ registerStylesSSR: true })],
+		loaders: { vueStyle: { manualInject: true } },
 		html: {
 			minify: {
 				collapseBooleanAttributes: true,
