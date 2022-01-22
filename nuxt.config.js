@@ -14,7 +14,7 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			// { rel: 'stylesheet', href: '/roboto.fontface.css' },
+			{ rel: 'stylesheet', href: '/roboto.fontface.css' },
 			// { rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
 		]
 	},
@@ -26,7 +26,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	// css: [process.env.NODE_ENV === 'production' ? '' : '~/node_modules/vuetify/dist/vuetify.min.css'],
-	css: ['@/static/roboto.fontface.css'],
+	// css: ['@/static/roboto.fontface.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
@@ -45,6 +45,7 @@ export default {
 		'@nuxt/typescript-build',
 		// https://go.nuxtjs.dev/vuetify
 		// '@nuxtjs/vuetify',
+		'nuxt-compress',
 		[
 			'vue-toastification/nuxt',
 			{
@@ -105,7 +106,7 @@ export default {
 				trimCustomFragments: true,
 				useShortDoctype: true,
 				removeComments: true,
-				preserveLineBreaks: false,
+				preserveLineBreaks: true,
 				collapseWhitespace: true
 			}
 		},
