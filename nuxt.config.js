@@ -45,7 +45,6 @@ export default {
 		'@nuxt/typescript-build',
 		// https://go.nuxtjs.dev/vuetify
 		// '@nuxtjs/vuetify',
-		'nuxt-compress',
 		[
 			'vue-toastification/nuxt',
 			{
