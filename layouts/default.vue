@@ -127,7 +127,6 @@ export default {
 html {
 	overflow: hidden !important;
 	scrollbar-color: white;
-	font-family: Roboto, sans-serif !important;
 	/* color-scheme: dark; */
 }
 .nuxt-wrap {
