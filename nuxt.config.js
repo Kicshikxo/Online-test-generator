@@ -14,10 +14,8 @@ export default {
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
-			// { rel: 'stylesheet', href: '/roboto.fontface.css' },
-			// { rel: 'preload', href: '/roboto.fontface.css', as: 'style' },
-			// { rel: 'stylesheet', href: '/vuetify.loaded.css' },
-			// { rel: 'preload', href: '/vuetify.loaded.css', as: 'style' },
+			{ rel: 'stylesheet', href: '/roboto.fontface.css' },
+			{ rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
 		]
 	},
 
@@ -27,7 +25,7 @@ export default {
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: [],
+	// css: [process.env.NODE_ENV === 'production' ? '' : '~/node_modules/vuetify/dist/vuetify.min.css'],
 	// css: ['@/static/vuetify.loaded.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -88,38 +86,6 @@ export default {
 		}
 	},
 
-	// Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-	// vuetify: {
-	// 	defaultAssets: false,
-	// 	treeShake: {
-	// 		loaderOptions: () => ({
-	// 			registerStylesSSR: true
-	// 		})
-	// 	},
-	// 	lang: {
-	// 		current: 'ru',
-	// 		locales: {
-	// 			ru: {
-	// 				noDataText: 'Список вариантов пуст'
-	// 			}
-	// 		}
-	// 	},
-	// 	theme: {
-	// 		dark: false,
-	// 		themes: {
-	// 			dark: {
-	// 				primary: colors.blue.darken2,
-	// 				accent: colors.grey.darken3,
-	// 				secondary: colors.amber.darken3,
-	// 				info: colors.teal.lighten1,
-	// 				warning: colors.amber.base,
-	// 				error: colors.deepOrange.accent4,
-	// 				success: colors.green.accent3
-	// 			}
-	// 		}
-	// 	}
-	// },
-
 	serverMiddleware: [{ path: '/api', handler: '~/api/index.js' }],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
@@ -139,6 +105,22 @@ export default {
 			if (isDev) {
 				config.mode = 'development'
 			}
-		}
+		},
+		html: {
+			minify: {
+				collapseBooleanAttributes: true,
+				decodeEntities: true,
+				minifyCSS: true,
+				minifyJS: true,
+				processConditionalComments: true,
+				removeEmptyAttributes: true,
+				removeRedundantAttributes: true,
+				trimCustomFragments: true,
+				useShortDoctype: true,
+				removeComments: true,
+				preserveLineBreaks: false,
+				collapseWhitespace: true
+			}
+		},
 	}
 }
