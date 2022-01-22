@@ -30,24 +30,19 @@ app.post('/auth/login', async function (request, response) {
 
 		if (result) {
 			response.cookie('token', result.token, {
-				httpOnly: true
+				httpOnly: true,
+				maxAge: 6048e5 // 7 days
 			})
 			response.json({
-				user: {
-					username: result.user.username
-				},
+				user: { username: result.user.username },
 				success: true,
 				redirect: '/'
 			})
 		} else {
-			response.json({
-				success: false
-			})
+			response.json({ success: false })
 		}
 	} else {
-		response.json({
-			success: false
-		})
+		response.json({ success: false })
 	}
 })
 
@@ -55,13 +50,9 @@ app.get('/auth/logout', (request, response) => {
 	if (request.cookies.token) {
 		response.clearCookie('token')
 
-		response.json({
-			success: true
-		})
+		response.json({ success: true })
 	} else {
-		response.json({
-			success: false
-		})
+		response.json({ success: false })
 	}
 })
 
@@ -73,20 +64,14 @@ app.get('/auth', async (request, response) => {
 
 		if (user) {
 			response.json({
-				user: {
-					username: user.username
-				},
+				user: { username: user.username },
 				success: true
 			})
 		} else {
-			response.json({
-				success: false
-			})
+			response.json({ success: false })
 		}
 	} catch (e) {
-		response.json({
-			success: false
-		})
+		response.json({ success: false })
 	}
 })
 
