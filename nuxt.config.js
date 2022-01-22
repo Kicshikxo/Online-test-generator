@@ -105,9 +105,8 @@ export default {
 				removeRedundantAttributes: true,
 				trimCustomFragments: true,
 				useShortDoctype: true,
-				minifyURLs: true,
-				removeComments: true,
-				removeEmptyElements: true
+				preserveLineBreaks: false,
+				collapseWhitespace: true
 			}
 		},
 	}
