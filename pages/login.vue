@@ -57,6 +57,7 @@
 <script>
 import { mdiKey } from "@mdi/js";
 export default {
+	middleware: "notAuth",
 	data: () => ({
 		mdiKey,
 		valid: false,
@@ -95,10 +96,6 @@ export default {
 </script>
 
 <style scoped>
-.login-card {
-	height: 50vh;
-}
-
 .background-content {
 	width: 100vw;
 	height: 280px;
