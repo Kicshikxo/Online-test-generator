@@ -15,7 +15,7 @@ export default {
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
 			{ rel: 'preload', href: '/fonts/Roboto-Regular.woff2', as: 'font', crossorigin: true },
 			{ rel: 'stylesheet', href: '/roboto.fontface.css' },
-			// { rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
+			{ rel: 'preload', href: '/roboto.fontface.css', as: 'style' }
 		]
 	},
 
@@ -105,9 +105,9 @@ export default {
 				removeRedundantAttributes: true,
 				trimCustomFragments: true,
 				useShortDoctype: true,
+				minifyURLs: true,
 				removeComments: true,
-				preserveLineBreaks: true,
-				collapseWhitespace: true
+				removeEmptyElements: true
 			}
 		},
 	}
