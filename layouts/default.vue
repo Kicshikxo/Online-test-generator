@@ -160,4 +160,11 @@ html {
 		max-width: 1185px !important;
 	}
 }
+@font-face {
+	font-family: "Roboto";
+	src: url(/fonts/Roboto-Regular.woff2) format("woff2"),
+		url(/fonts/Roboto-Regular.woff) format("woff"),
+		url(/fonts/Roboto-Regular.ttf) format("ttf");
+	font-display: swap;
+}
 </style>

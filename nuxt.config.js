@@ -26,7 +26,7 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	// css: [process.env.NODE_ENV === 'production' ? '' : '~/node_modules/vuetify/dist/vuetify.min.css'],
-	css: ['@/static/roboto.fontface.css'],
+	// css: ['@/static/roboto.fontface.css'],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
 	plugins: [
