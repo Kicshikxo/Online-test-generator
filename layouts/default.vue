@@ -57,14 +57,14 @@
 								@click="login"
 								>Войти</v-btn
 							>
-							<!-- <v-btn
+							<v-btn
 								color="primary"
 								depressed
 								large
 								class="px-6"
 								@click="registration"
 								>Регистрация</v-btn
-							> -->
+							>
 						</template>
 					</div>
 				</transition>
@@ -153,12 +153,23 @@ html {
 	height: 100%;
 }
 .header-buttons-container .header-buttons {
-	gap: 24px;
+	gap: 12px;
 }
 @media (min-width: 1904px) {
 	.container {
 		max-width: 1185px !important;
 	}
+}
+@media (max-width: 600px) {
+	.Vue-Toastification__container .Vue-Toastification__toast {
+		width: auto !important;
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+		border-radius: 8px;
+	}
+}
+.Vue-Toastification__toast-body {
+	font-family: Roboto, sans-serif !important;
 }
 @font-face {
 	font-family: "Roboto";
